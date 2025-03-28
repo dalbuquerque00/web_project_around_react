@@ -106,8 +106,12 @@
     flex-direction: column;
   }
 
+  .elements__item-title {
+    font-size: 4.85em;
+  }
+
   .elements__item {
-    width: 88vw;
+    width: 70vw;
     height: 112.8vw;
   }
   .elements__item-content {
