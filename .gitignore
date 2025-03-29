@@ -1,0 +1,16 @@
+# Ignora node_modules
+node_modules/
+
+# Ignora builds do Vite
+dist/
+
+# Ignora logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignora arquivos do sistema/macOS
+.DS_Store
+
+# Ignora arquivos do editor (VSCode, etc)
+.vscode/
