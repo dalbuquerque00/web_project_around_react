@@ -1,5 +1,3 @@
-// Funcionalidade para adicionar imagens
-
 import { useState, useEffect } from 'react';
 
 export default function NewCard({ handleAddPlaceSubmit }) {
@@ -63,7 +61,7 @@ export default function NewCard({ handleAddPlaceSubmit }) {
         />  
         <span className="popup__error">  
           {name.length > 0 && name.length < 2 ?   
-            `Use pelo menos 2 caracteres (atualmente está usando ${name.length} caracteres).`   
+            `Use pelo menos 2 caracteres (actualmente está usando ${name.length} caracteres).`   
             : '\u00A0'}  
         </span>  
       </div>  
@@ -73,14 +71,14 @@ export default function NewCard({ handleAddPlaceSubmit }) {
           type="url"  
           name="link"  
           className="popup__input popup__input_link"  
-          placeholder="Link da imagen"  
+          placeholder="Link da imagem"  
           required  
           value={link}  
           onChange={handleLinkChange}  
         />  
         <span className="popup__error">  
           {link.length > 0 && !isValidUrl(link) ?   
-            'Por favor, introduza uma URL válida'   
+            'URL inválida'   
             : '\u00A0'}  
         </span>  
       </div>  
@@ -90,7 +88,7 @@ export default function NewCard({ handleAddPlaceSubmit }) {
         className={`popup__button ${!isFormValid ? 'popup__button_disabled' : ''}`}    
         disabled={!isFormValid}    
       >    
-        Crear    
+        Salvar
       </button>  
     </form>  
   );  

@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import EditButton from "../../images/Edit_button.svg";
-import Avatar from "../../images/avatar.jpg";  
+import EditButton from "../../images/Edit_button.svg"; 
 import Popup from "./components/Popup/popup";
-import NewCard from "./components/form/NewCard/newCard";
+import NewCard from "./components/Form/NewCard/newCard";
 import EditProfile from "./components/Form/EditProfile/editProfile";
 import EditAvatar from "./components/Form/EditAvatar/editAvatar";
 import Card from "./components/Card/card";
@@ -25,13 +24,13 @@ export default function Main({
         <div className="profile__avatar-container">
           <img   
             src={currentUser.avatar}   
-            alt="Imagen de perfil"   
+            alt="Avatar"   
             className="profile__avatar"   
           />
           <div 
             className="profile__avatar-edit"   
             onClick={() => onOpenPopup({  
-              title: "Cambiar foto de perfil",  
+              title: "Editar foto de perfil",  
               children: <EditAvatar />  
             })} 
           ></div>
@@ -41,7 +40,7 @@ export default function Main({
         <button className="profile__edit-button">
           <img
             src={EditButton}
-            alt="Boton para editar el perfil"
+            alt="Botão para editar perfil"
             className="profile__edit-icon"
             type="button"
             onClick={() => onOpenPopup({  
@@ -54,7 +53,7 @@ export default function Main({
           className="button-add"
           type="button"  
           onClick={() => onOpenPopup({  
-            title: "Nuevo lugar",  
+            title: "Novo lugar",  
             children: <NewCard handleAddPlaceSubmit={handleAddPlaceSubmit} />  
           })}
         ></button>

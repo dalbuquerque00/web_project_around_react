@@ -1,5 +1,3 @@
-// função edição de perfil
-
 import { useState, useContext, useEffect } from 'react';
 import CurrentUserContext from '../../../../../contexts/CurrentUserContext';
 
@@ -57,7 +55,7 @@ export default function EditProfile() {
         />
         <span className="popup__error">
           {name.trim().length === 0 ? 
-            'Este campo no puede estar vacío' : 
+            'Este campo não pode estar vazio' : 
             name.trim().length < 2 ? 
             `Use pelo menos 2 caracteres (atualmente está usando ${name.length} caracteres).` : 
             '\u00A0'}
@@ -69,7 +67,7 @@ export default function EditProfile() {
           type="text"
           name="job"
           className="popup__input popup__input_job"
-          placeholder="Sobre mim"
+          placeholder="Sobre Mim"
           required
           minLength="2"
           maxLength="200"
@@ -80,7 +78,7 @@ export default function EditProfile() {
           {description.trim().length === 0 ? 
             'Este campo não pode estar vazio' : 
             description.trim().length < 2 ? 
-            `Use pelo menos 2 caracteres (atualmente está usando ${description.length} caracteres).` : 
+            `Use pelo menos 2 caracteres (actualmente está usando ${description.length} caracteres).` : 
             '\u00A0'}
         </span>
       </div>
@@ -90,7 +88,7 @@ export default function EditProfile() {
         className={`popup__button ${!isFormValid ? 'popup__button_disabled' : ''}`}
         disabled={!isFormValid}
       >
-        Guardar
+        Salvar
       </button>
     </form>
   );

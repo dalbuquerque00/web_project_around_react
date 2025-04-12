@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import likeIcon from "../../../../images/like.svg";
 import CurrentUserContext from "../../../../contexts/CurrentUserContext";
 
 function Card({ card, handleOpenPopup, onCardLike, onCardDelete }) {

@@ -39,11 +39,11 @@ function App() {
   };
 
   async function handleCardLike(card) {
-    // Verifica se o card está no estado de "like"
+    // Verifica novamente se o botão de like está ativo
     const isLiked = card.isLiked;
     
     try {
-        // Enviar uma solicitação para a API para obter dados atualizados
+        // Envia uma solicitação ao API e recebe os dados atualizados
         const newCard = await api.changeLikeCardStatus(card._id, isLiked);
         setCards((state) => state.map((currentCard) => 
             currentCard._id === card._id ? newCard : currentCard

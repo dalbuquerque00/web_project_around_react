@@ -68,15 +68,29 @@
 
 .elements__item-like {
   width: 1.71vw;
+  height: 1.71vw;
+  justify-self: end;
   cursor: pointer;
   fill: black;
-  height: auto;
-  justify-self: end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../images/like.svg");
+  border: none;
+  background-color: transparent;
 }
 
 .elements__item-like:hover {
   opacity: 0.5;
 }
+
+.elements__item-like_active {
+  background-image: url("../images/like-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .elements {
@@ -92,7 +106,8 @@
     height: 17.68vw;
   }
   .elements__item-like {
-    width: 7.5vw;
+    width: 1.71vw;
+    height: 1.71vw;
   }
   .elements__delete {
     width: 3.9vw;

@@ -1,6 +1,6 @@
 export default function Popup(props) {
   const { onClose, title, children } = props;
-// Função para fechar
+
   return (
     <div className={`popup ${props.isOpen ? "popup_opened" : ""}`}>
       <div

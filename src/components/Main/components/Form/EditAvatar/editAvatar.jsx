@@ -1,5 +1,3 @@
-// Edição da imagem de perfil
-
 import React, { useState, useContext, useEffect } from 'react';
 import CurrentUserContext from '../../../../../contexts/CurrentUserContext';
 
@@ -46,16 +44,16 @@ export default function EditAvatar() {
           type="url"
           name="avatar"
           className="popup__input popup__input_avatar"
-          placeholder="link da imagen"
+          placeholder="Link da imagem"
           required
           value={avatarLink}
           onChange={handleAvatarChange}
         />
         <span className="popup__error">
           {avatarLink.trim().length === 0 ? 
-            'Por favor, introduza uma URL válida' : 
+            'URL inválida' : 
             !isValidUrl(avatarLink) ? 
-            'Por favor, introduza uma URL válida' : 
+            'URL inválida' : 
             '\u00A0'}
         </span>
       </div>
@@ -65,7 +63,7 @@ export default function EditAvatar() {
         className={`popup__button ${!isFormValid ? 'popup__button_disabled' : ''}`}
         disabled={!isFormValid}
       >
-        Guardar
+        Salvar
       </button>
     </form>
   );

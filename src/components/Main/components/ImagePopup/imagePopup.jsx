@@ -1,4 +1,3 @@
-// PopUp da imagem
 export default function ImagePopup({ card }) {
     return (
       <>
