@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import api from "../../utils/api";
 import EditButton from "../../images/Edit_Button.svg";
 import Avatar from "../../images/Avatar.jpg";  
 import Popup from "./components/Popup/popup";
@@ -6,34 +7,24 @@ import NewCard from "./components/Form/NewCard/newCard";
 import EditProfile from "./components/Form/EditProfile/editProfile";
 import EditAvatar from "./components/Form/EditAvatar/editAvatar";
 import Card from "./components/Card/card";
-// cARDS Iniciais
-const cards = [
-  {
-    isLiked: false,
-    _id: '5d1f0611d321eb4bdcd707dd',
-    name: 'Yosemite Valley',
-    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg',
-    owner: '5d1f0611d321eb4bdcd707dd',
-    createdAt: '2019-07-05T08:10:57.741Z',
-  },
-  {
-    isLiked: false,
-    _id: '5d1f064ed321eb4bdcd707de',
-    name: 'Lake Louise',
-    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg',
-    owner: '5d1f0611d321eb4bdcd707dd',
-    createdAt: '2019-07-05T08:11:58.324Z',
-  },
-];
-
-console.log(cards);
 
 export default function Main() {
   const [popup, setPopup] = useState(null);  
+  const [cards, setCards] = useState([]);
   const newCardPopup = { title: "Novo local", children: <NewCard /> };
   const editProfilePopup = { title: "Editar perfil", children: <EditProfile /> };
   const editAvatarPopup = { title: "Trocar foto de perfil", children: <EditAvatar /> };
   
+  useEffect(() => {
+    api.getInitialCards()
+      .then((data) => {
+        setCards(data);
+      })
+      .catch((err) => {
+        console.error('Erro ao buscar os cards:', err);
+      });
+  }, []);
+
   function handleOpenPopup(popup) {  
     setPopup(popup);  
   }  
@@ -41,11 +32,11 @@ export default function Main() {
   function handleClosePopup() {  
     setPopup(null);  
   }
-// Clique na imagem ( Verficar depois )
+
   function handleCardClick(imageComponent) {
     setPopup(imageComponent);
   }
-// Edição de Avatar
+
     return (
         <main className="content">
         <section className="profile">
