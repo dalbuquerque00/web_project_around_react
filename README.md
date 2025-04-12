@@ -10,11 +10,11 @@ Este projeto é uma migração da aplicação **"Around The U.S."** desenvolvida
 
 ## 🚀 Funcionalidades Principais até o momento
 
-- ✏️ Edição do perfil do usuário  (Popup Funcional)
-- 🖼 Atualização do avatar   (Popup Funcional)
+- ✏️ Edição do perfil do usuário 
+- 🖼 Atualização do avatar 
 - 🔍 Visualização de imagens em popup  
 - 📱 Layout totalmente responsivo  
-- ✅ Formulários com validação (Sem envio) 
+- ✅ Formulários com validação
 - 💬 Interações com popups modais
 
 ---
@@ -28,10 +28,10 @@ Este projeto é uma migração da aplicação **"Around The U.S."** desenvolvida
 - CSS3
 
 ### ⚙️ Ferramentas de Desenvolvimento
-- [Vite](https://vitejs.dev/) (build ultrarrápido)
+- [Vite](https://vitejs.dev/) 
 - Visual Studio Code
 - Git
-- [Figma](https://www.figma.com/) (para design)
+- [Figma](https://www.figma.com/)
 - npm (gerenciador de pacotes)
 
 ### 🧩 Metodologias e Padrões

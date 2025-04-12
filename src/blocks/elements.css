@@ -105,13 +105,9 @@
   .elements__item-content {
     height: 17.68vw;
   }
-  .elements__item-like {
-    width: 1.71vw;
-    height: 1.71vw;
-  }
   .elements__delete {
     width: 3.9vw;
-    height: 7.2vw;
+    height: 2.2vw;
   }
 }
 
@@ -134,5 +130,7 @@
   }
   .elements__item-like {
     width: 7.5vw;
+    height: 5.5vw;
   }
+  
 }
